@@ -1,0 +1,6 @@
+.background {
+  min-height: 422px;
+  background-image: url('../../images/stockholm.jpeg');
+  background-repeat: no-repeat;
+  margin-bottom: 10px;
+}

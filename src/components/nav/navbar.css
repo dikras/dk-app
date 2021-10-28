@@ -1,0 +1,22 @@
+.nav {
+  grid-area: app-nav;
+  background-color: #a6c5f5;
+}
+
+.nav__list {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.nav__item {
+  color: rgba(102, 12, 32, 0.815);
+  margin-bottom: 10px;
+}
+
+.nav__item:last-child {
+  margin-top: 40px;
+}
+
+.nav__link {
+  text-decoration: none;
+}
