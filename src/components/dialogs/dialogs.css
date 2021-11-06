@@ -1,0 +1,31 @@
+.dialogs {
+  background-color: blanchedalmond;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-bottom: 20px;
+}
+
+.dialogs__list-names,
+.dialogs__list-messages {
+  width: 300px;
+  padding: 20px;
+}
+
+.dialogs__list-names .active {
+  color:blue;
+}
+
+.dialogs-sender {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogs__textarea {
+  width: 300px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+.dialogs__btn {
+  width: 50px;
+}

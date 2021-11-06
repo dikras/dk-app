@@ -1,8 +1,9 @@
 import './post.css';
 
-const Post = () => {
+const Post = (props) => {
+
   return (
-    <li className="post__item">post </li>
+    <li className="post__item">{ props.message }</li>
   );
 };
 

@@ -4,9 +4,9 @@ import Post from '../post/post';
 const PostList = () => {
   return (
     <ul className="post__list">
-      <Post />
-      <Post />
-      <Post />
+      <Post message="Hi, how are you?" />
+      <Post message="It's my first post" />
+      <Post message="Hello, Dima!" />
     </ul>
   );
 };
