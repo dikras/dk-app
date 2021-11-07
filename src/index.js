@@ -2,14 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {BrowserRouter} from 'react-router-dom';
 import store from './redux/state';
 
 let rerenderEntireTree = (state) => {
   ReactDOM.render(
-    <BrowserRouter>
-      <App store={store} dispatch={store.dispatch.bind(store)} />
-    </BrowserRouter>,
+    <App store={store} dispatch={store.dispatch.bind(store)} />,
     document.getElementById('root')
   );
 };

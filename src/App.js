@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Header from './components/header/header';
 import Navbar from './components/navbar/navbar';
@@ -9,7 +9,7 @@ const App = (props) => {
   const { store } = props;
 
   return (
-    <Router>
+    <BrowserRouter>
       <div className="app-wrapper">
         <Header />
         <Navbar />
@@ -20,7 +20,7 @@ const App = (props) => {
           <Dialogs store={store} />
         </Route>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
