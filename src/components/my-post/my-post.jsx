@@ -1,21 +1,40 @@
 import './my-post.css';
 import { createRef } from 'react';
+import Post from '../post/post';
 
 const MyPost = (props) => {
+
+  let postElements = props.posts.map( post => <Post message={post.message} likesCount={post.likesCount} />);
+  
   const newPostElement = createRef();
 
-  const addPost = () => {
-    const text = newPostElement.current.value;
-    alert(text);
+  const onAddPost = () => {
+    props.addPost();
   } 
+
+  const onPostChange = (evt) => {
+    let text = newPostElement.current.value;
+    props.updateNewPostText(text);
+  }
 
   return (
     <div className="posts__mypost">
-      <textarea className="posts__area" ref={newPostElement} value={props.newPostText} name="post" id="post" cols="30" rows="10"></textarea>
+      <textarea
+        className="posts__area"
+        ref={newPostElement}
+        value={props.newPostText}
+        onChange={onPostChange}
+      ></textarea>
       <div className="posts__btn-block">
-        <button className="posts__btn posts__btn--add" onClick={addPost}>Add post</button>
+        <button
+          className="posts__btn posts__btn--add"
+          onClick={onAddPost}
+        >Add post</button>
         <button className="posts__btn posts__btn--delete">Remove post</button>
       </div>
+      <ul className="post__list">
+        {postElements}
+      </ul>
     </div>
   );
 };

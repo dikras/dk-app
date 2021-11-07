@@ -6,7 +6,6 @@ import MainContent from './components/main-content/main-content';
 import Dialogs from './components/dialogs/dialogs';
 
 const App = (props) => {
-  const { store } = props;
 
   return (
     <BrowserRouter>
@@ -14,10 +13,12 @@ const App = (props) => {
         <Header />
         <Navbar />
         <Route exact path="/main-content">
-          <MainContent />
+          <MainContent
+            store={props.store}
+          />
         </Route>
         <Route exact path="/dialogs">
-          <Dialogs store={store} />
+          <Dialogs store={props.store} />
         </Route>
       </div>
     </BrowserRouter>

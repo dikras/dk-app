@@ -9,3 +9,7 @@
 .posts__btn-block {
   margin-bottom: 30px;
 }
+
+.post__list {
+  width: 700px;
+}

@@ -1,17 +1,18 @@
 import './main-content.css';
 import Profile from '../profile/profile';
 import Background from '../background/background';
-import PostList from '../post-list/post-list';
-import MyPosts from '../my-post/my-post';
+import MyPostContainer from '../my-post/my-post-container';
 
 const MainContent = (props) => {
+
   return (
     <main className="main-content">
       <Background />
       <Profile />
       <div className="posts">
-        <MyPosts />
-        <PostList />
+        <MyPostContainer
+          store={props.store}
+        />
       </div>
     </main>
     
