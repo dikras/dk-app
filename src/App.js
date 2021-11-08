@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/header/header';
 import Navbar from './components/navbar/navbar';
 import MainContent from './components/main-content/main-content';
-import Dialogs from './components/dialogs/dialogs';
+import DialogsContainer from './components/dialogs/dialog-container';
 
 const App = (props) => {
 
@@ -18,7 +18,7 @@ const App = (props) => {
           />
         </Route>
         <Route exact path="/dialogs">
-          <Dialogs store={props.store} />
+          <DialogsContainer store={props.store} />
         </Route>
       </div>
     </BrowserRouter>
